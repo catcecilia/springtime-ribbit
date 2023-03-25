@@ -1,0 +1,43 @@
+start:
+  - play normalBGM:
+  - show room: WITH FADE CONTINUE
+  - show mayor: happy AT CENTER WITH FADE
+  - mayor says: Hello, welcome to (bold)the Quickstart!(end)
+  - wait: 300
+  - mayor says normal: Are you ready to create great visual novels?
+  - choice:
+      - "Yes!":
+          - mayor says happy: That's great! Go ahead!
+      - "Not yet!":
+          - mayor says: Well, I'll be here when you're ready!
+  - mayor says normal: If you're new, don't forget to play (bold)the Tutorial(end) game, where me and my friends will show you around the basic features of RenJS.
+  - mayor says happy: And if you already have some experience, you can go ahead and start writing!
+  - scene: endGame
+
+endGame:
+  - mayor says angry: Quickstart over!
+  - hide ALL:
+  - effect ROLLINGCREDITS:
+    endGame: true
+    text:
+      - Thank you for playing!
+      - null
+      - story by
+      - Cat
+      - null
+      - background art by
+      - konett
+      - null
+      - characters by
+      - Cat
+      - null
+      - music by
+      - Kenney from Kenney.nl
+      - null
+      - RenJS.V2 created by
+      - lunafromthemoon
+      - null
+      - null
+      - null
+      - null
+      - Please file your taxes
