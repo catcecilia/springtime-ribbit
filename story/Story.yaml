@@ -162,14 +162,16 @@ everyoneVersionTwo:
   - scene: everyoneEnding
 
 taxesDone:
+  - hide ALL:
+  - show room:
   - text: I let out a sigh of relief as I clicked the "submit" button on my tax form. Finally, it was done.
   - text: I had been putting it off for weeks, dreading the tedious process of filling out all those forms and calculating my expenses. But now, it was over, and I could finally relax.
   - text: As I stretched out in my chair, I heard a commotion outside. Curious, I got up and went to investigate.
   - hide room:
   - show room:
   - text: I could hear raised voices, and my curiosity grew. When I got to the main hall, I saw two frogs arguing, their voices rising in anger.
-  - show cedar: angry
-  - show oak: angry
+  - show cedar: angry AT LEFT
+  - show oak: angry AT RIGHT
   - text: I hesitated for a moment, unsure if I should intervene or not. I also hear the sound of piano playing in the distance. 
   - choice:
     - Intervene in the argument:
@@ -235,11 +237,11 @@ badTigerella:
 
 cedarOrOak: 
   - text: I decided to step forward and see if I could help. As I approached, the two frogs turned to face me, and their expressions softened.
-  - cedar says: Can we help you with something?
+  - cedar says normal: Can we help you with something?
   - text: "I just heard you guys arguing and I thought I could maybe help in some way."
   - text: To my surprise, the two frogs actually smiled and thanked me for my offer. We talked for a while, and I was able to help them come to a resolution about the best way to prepare and eat insects. 
   - text: It felt good to have been able to help, and I was glad to have been there in that moment.
-  - oak says: I know we've been talking about insects a bunch, but I want this newcomer here to settle the score. What's better - traveling the world or cozying up to a good book? The correct answer is traveling,
+  - oak says normal: I know we've been talking about insects a bunch, but I want this newcomer here to settle the score. What's better - traveling the world or cozying up to a good book? The correct answer is traveling,
   - text: Oak winks at me.
   - cedar says angry: Having the perfect tea blend and a juicy fanfic- I mean novel is the best thing to do.
   - choice:
