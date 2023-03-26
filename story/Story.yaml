@@ -1,22 +1,329 @@
 start:
-  - play normalBGM:
+  - play normalBGM: LOOPED
   - show room: WITH FADE CONTINUE
-  - show mayor: happy AT CENTER WITH FADE
-  - mayor says: Hello, welcome to (bold)the Quickstart!(end)
-  - wait: 300
-  - mayor says normal: Are you ready to create great visual novels?
-  - choice:
-      - "Yes!":
-          - mayor says happy: That's great! Go ahead!
-      - "Not yet!":
-          - mayor says: Well, I'll be here when you're ready!
-  - mayor says normal: If you're new, don't forget to play (bold)the Tutorial(end) game, where me and my friends will show you around the basic features of RenJS.
-  - mayor says happy: And if you already have some experience, you can go ahead and start writing!
+  - text: As I made my way into Ribbitsville, I couldn't help but feel a sense of wonder and curiosity. Sure, I've been here since winter, but it looked so different now that it was spring. 
+  - text: All the snow had melted, and there were more frog folks out and about (do frogs hibernate?). With new sights and sounds to explore, I was eager to see what the town had to offer.
+  - hide room:
+  - show room: WITH FADE CONTINUE
+  - text: Walking down the main street, I noticed a group of frogs gathered around a sign outside the community center. Curious, I made my way over to see what was going on.
+  - show taxes: 
+  - text: "Attention all residents of Ribbitsville! The Community Center has been reserved for a special event."
+  - hide taxes:
+  - text: Intrigued, I couldn't help but wonder what kind of activity could be going on that would bring the entire town together.
+  - text: Just then, the mayor of Ribbitsville approached me.
+  - show mayor: normal AT CENTER WITH FADE
+  - mayor says normal: Ah, you must be the newcomer.
+  - text: He extends his webbed hand to me.
+  - mayor says: Welcome to our town. I'm Mayor Hopps. I was just about to ask you to come to the community center. We have a special event planned for today. You and a few others are invited.
+  - text: "Of course! I'd love to see what's going on."
+  - text:  As I made my way into the community center, I stood near a group of four frogs, all looking oddly unenthusiastic. The room was filled with anticipation, and I couldn't help but feel curious.
+  - mayor says happy: Can I have your attention, please? Ahem, perfect. As you may know, it's spring now. Most of you have prepared your taxes in advance, but a few of you have not. 
+  - mayor says angry: They're not due until the end of spring, but the town has a goal to have everyone complete it by...
+  - mayor says normal:  well, now! Let's see who's ready for roll call...
+  - hide mayor:
+  - text: Oh god, taxes. Should I do it? As I thought about this, I noticed that one frog had snuck out. Should I follow their lead?
+  - choice: 
+    - Follow their lead:
+      - hide room:
+      - stop bgm:
+      - scene: helloAconite
+    - Stay put:
+      - hide room:
+      - scene: stayForTaxes
+
+helloAconite:
+- play aconiteBGM: LOOPED
+- show room: WITH FADE CONTINUE
+- text: Ahh yes, freedom of not doing taxes yet. Keyword - yet. 
+- aconite says: Hey there!
+- show aconite: happy AT CENTER
+- aconite says: You didn't really want to do taxes either, did you? My name is Aconite
+- text: I laughed, feeling a sense of relief that someone else felt the same way I did. 
+- text: "No not really. I'm not really sure what I was expecting for the special event, but that wasn't it. I think I'll do that later."
+- text: The frog nodded in agreement. 
+- aconite says: I know what you mean. Sometimes the Mayor can be a little...well, you know...
+- text: I smile. He's such an easy-going frog.
+- text: "So what do you suggest we do instead?" 
+- aconite says: Well...
+- text: He scratches his chin.
+- aconite says: I was thinking of shooting some hoops over at the park. Wanna join me?
+- choice: 
+    - Sure:
+      - scene: aconiteEndings
+    - No thanks:
+      - scene: goodByeAconite
+
+goodByeAconite:
+  - text: As the friendly frog suggested playing basketball together, I hesitated for a moment.
+  - text: I had to prepare for my welcome party to meet everyone in my neighborhood, which was happening in two days.
+  - text: I really wanted to play basketball, but I knew that I couldn't be late for the party.
+  - text: "I would love to play basketball with you, but I have to go now"
+  - text: "I'm having a welcome party for my neighbors in just a few hours, and I need to make sure everything is ready."
+  - text: Aconite nodded understandingly.
+  - aconite says angry: No problem at all. Maybe we can play some other time...
+  - text: I smiled, grateful for the invitation. 
+  - text: "That sounds great."
+  - stop bgm:
+  - hide aconite:
+  - hide room:
+  - scene: everyoneEnding
+
+everyoneEnding: 
+  - play normalBGM: LOOPED
+  - text: Two days later...
+  - show room:
+  - text: As the sun began to set, the guests started to arrive at my house. 
+  - text: Each frog that came was friendly and welcoming, and I found myself feeling more and more at home in this new town.
+  - text: We chatted and laughed over delicious snacks, and I was struck by how kind and genuine everyone was. 
+  - text: It was clear that the residents of Ribbitsville truly cared about their community and each other, and I was grateful to be a part of it.
+  - text: As the party drew to a close, I felt a sense of contentment wash over me. I had made so many new friends in just a few days of Spring, and I knew that I had found a special place in Ribbitsville. 
+  - text: I couldn't wait to explore the town further and see what other adventures this season had in store for me.
   - scene: endGame
 
+aconiteEndings:
+  - play aconiteBGM: LOOPED
+  - text: As Aconite suggested playing basketball together, I immediately accepted. 
+  - text: I was in the mood for a good game, and the prospect of playing with someone who seemed to know their way around the court was exciting.
+  - hide aconite: 
+  - text: The game was intense, with Aconite displaying some impressive skills that left me struggling to keep up.
+  - text: But I didn't give up, and I pushed myself harder and harder until finally, we ended the game in a draw.
+  - text: "That was amazing. You're really good at this!"
+  - show aconite: happy AT CENTER
+  - text: Aconite smiled.
+  - aconite says happy: Thanks! I've been playing basketball for as long as I can remember. It's one of my favorite things to do.
+  - hide aconite:
+  - hide room:
+  - text: As we walked off the court, the frog turned to me.
+  - show room:
+  - show aconite:
+  - aconite says normal: So, what are your plans for tonight? Anything fun? 
+  - choice:
+    - No plans:
+      - scene: goodAconite
+    - I'm busy:
+      - scene: badAconite
+  
+goodAconite: 
+  - text: I paused, thinking for a moment. 
+  - text: I had arrived in Ribbitsville just a season ago and hadn't made any plans yet for Spring
+  - text: "Not really"
+  - text: "I'm still getting to know the town and the people here. What do you suggest?"
+  - text: The frog thought for a moment.
+  - aconite says normal: Well, there's a great restaurant in town that I really like. They serve the best flies in Ribbitsville. Would you like to join me for dinner?
+  - text: I smiled, feeling grateful for the invitation. 
+  - text: "Sure, I'd love to"
+  - text: I'm feeling excited about trying out a new restaurant and getting to know this friendly frog even better.
+  - hide aconite:
+  - hide room: 
+  - text: As we headed towards the restaurant, I couldn't help feeling a sense of anticipation for the adventures that awaited me in this charming little town of Ribbitsville.
+  - scene: endGame
+
+badAconite:
+  - text: I paused, thinking for a moment. Then, I remembered that I had a welcome house party in a few days.
+  - text: "Unfortunately, I have some plans."
+  - text: "I need to go home and do some chores, actually. It was nice meeting you."
+  - aconite says angry: Well, darn. That's okay. It was nice meeting you too. Maybe I'll see you around the court sometime?
+  - text: "Yeah, sure. See you on the court, Aconite."
+  - hide aconite:
+  - stop bgm:
+  - scene: everyoneEnding
+
+stayForTaxes:
+  - show room:
+  - text: I couldn't help but feel a little nervous about doing my taxes. I didn't really know what to expect. Was it mandatory to stay here and complete it by tonight?
+  - text: Half-listening to the mayor, I heard my name being called.
+  - text: "I'm here!"
+  - text: I looked over to see who the other frogs were.
+  - mayor says: Cedar?
+  - show cedar:
+  - cedar says: Here.
+  - hide cedar:
+  - mayor says: Oak?
+  - show oak:
+  - oak says: Howdy
+  - hide oak:
+  - mayor says: Tigerella?
+  - show tigerella:
+  - text: Tigerella raises her hand. Mayor Hopps was still looking down on his list, so I coughed to get his attention.
+  - mayor says: Tigerella, are you here? Oh, my apologies! I didn't see your hand just now.
+  - text: The Mayor finished the roll call and then explained that the activity was actually optional to do today but highly encouraged. 
+  - text: He explained that it was a fun way to get to know other frogs in the community and that it was a great way to bond with others.
+  - choice:
+    - Go home:
+      - scene: everyoneVersionTwo
+    - Actually file taxes:
+      - scene: taxesDone
+
+everyoneVersionTwo:
+  - text: As some frogs began to file their taxes, I hesitated for a moment. 
+  - text: I had to prepare for my welcome party to meet everyone in my neighborhood, which was happening in two days. 
+  - text: I really wanted to do it, but I knew it could be done after the party.
+  - hide room:
+  - scene: everyoneEnding
+
+taxesDone:
+  - text: I let out a sigh of relief as I clicked the "submit" button on my tax form. Finally, it was done.
+  - text: I had been putting it off for weeks, dreading the tedious process of filling out all those forms and calculating my expenses. But now, it was over, and I could finally relax.
+  - text: As I stretched out in my chair, I heard a commotion outside. Curious, I got up and went to investigate.
+  - hide room:
+  - show room:
+  - text: I could hear raised voices, and my curiosity grew. When I got to the main hall, I saw two frogs arguing, their voices rising in anger.
+  - show cedar: angry
+  - show oak: angry
+  - text: I hesitated for a moment, unsure if I should intervene or not. I also hear the sound of piano playing in the distance. 
+  - choice:
+    - Intervene in the argument:
+      - scene: cedarOrOak
+    - Follow the piano sound:
+      - hide cedar:
+      - hide oak:
+      - hide room:
+      - stop bgm:
+      - scene: tigerellaEndings
+
+tigerellaEndings:
+  - play tigerellaBGM: LOOPED
+  - show room:
+  - text: I followed the sound of the piano until I found a small room with a lone frog playing a beautiful melody. 
+  - show tigerella:
+  - text: She was lost in her playing and didn't notice me at first, but when she finished the song and looked up, she saw me and frowned.
+  - tigerella says angry: Uhh hi. Can I help you with something?
+  - text: I shook my head, feeling a little shy.
+  - text: "Oh, no, I was just following the sound of the piano. You're really good."
+  - tigerella says normal: Thank you, I've been practicing a lot lately. It's nice to have a peaceful moment to myself
+  - text: Tigerella starts playing again.
+  - choice: 
+    - Stay and listen:
+      - scene: goodTigerella
+    - Try to talk more:
+      - scene: badTigerella
+
+goodTigerella:
+  - text: I nodded, feeling a sense of kinship with this frog. I too appreciated quiet moments of reflection and introspection.
+  - text: I asked if I could stay to listen for a little bit longer, and Tigerella nodded. A few songs later, we began sharing stories and getting to know each other better. I
+  - text: I learned that they were named after a tomato species and that they loved playing the piano because it helped them feel centered and focused.
+  - text: As we talked, I felt my own worries and stresses start to melt away. Being in Tigerella's presence was calming and reassuring, and I found myself feeling grateful for this chance encounter.
+  - text: Eventually, I realized that I had been there for quite some time and that I should probably get going. Tigerella smiled.
+  - tigerella says happy: Anytime. I think we're off to a good start as friends
+  - text: I stayed for one more song before waving goodbye to Tigerella and inviting her to my upcoming welcome house party.
+  - hide tigerella:
+  - hide room:
+  - scene: endGame
+
+badTigerella:
+  - text: As I stood there listening, I couldn't help but notice that the frog seemed a little sad. Her notes started to become more melancholic, and she had a slight frown on her face. 
+  - text: I felt a sudden urge to break the silence and talk to her.
+  - text: "Excuse me. Do you like jazz?"
+  - text: She opened her eyes and looked at me with confusion.
+  - tigerella says angry: What? Jazz? I don't know. I'm sorry, I'm not in the mood to talk right now
+  - text: Her voice sounds cold and distant.
+  - stop bgm:
+  - text: I felt a little taken aback by her reaction. I didn't mean to upset her, but I could tell that I had struck a nerve.
+  - text: "I didn't mean to bother you. I just wanted to say hello and appreciate your beautiful playing"
+  - text: The frog didn't respond, but I could see that her expression had softened a bit. I took it as a cue to leave and started to make my way out of the room. As I reached the door, she spoke up.
+  - tigerella says angry: ... Thank you. I appreciate the attempt at friendship. I'm just going through a rough time right now.
+  - text: I turn to face them.
+  - text: "I understand. If you ever want to talk or play some jazz together, just let me know."
+  - text: She nodded, still looking a little sad but grateful nonetheless.
+  - tigerella says normal: That's kind of you.. Maybe I'll take you up on that offer someday...
+  - text: I sensed a feeling of overstaying my welcome.
+  - text: "Thanks again for letting me listen. I'll leave you to it then."
+  - hide tigerella:
+  - text: If she heard me, it was hard to tell. She kept playing on, but now I felt a little guilty.
+  - hide room:
+  - scene: endGame
+
+cedarOrOak: 
+  - text: I decided to step forward and see if I could help. As I approached, the two frogs turned to face me, and their expressions softened.
+  - cedar says: Can we help you with something?
+  - text: "I just heard you guys arguing and I thought I could maybe help in some way."
+  - text: To my surprise, the two frogs actually smiled and thanked me for my offer. We talked for a while, and I was able to help them come to a resolution about the best way to prepare and eat insects. 
+  - text: It felt good to have been able to help, and I was glad to have been there in that moment.
+  - oak says: I know we've been talking about insects a bunch, but I want this newcomer here to settle the score. What's better - traveling the world or cozying up to a good book? The correct answer is traveling,
+  - text: Oak winks at me.
+  - cedar says angry: Having the perfect tea blend and a juicy fanfic- I mean novel is the best thing to do.
+  - choice:
+    - Traveling is best:
+      - stop bgm:
+      - scene: oakEnding
+    - Fanfiction? Gross:
+      - scene: badCedar
+    - I love a good book:
+      - scene: goodCedar
+
+oakEnding:
+  - play oakBGM: LOOPED
+  - text: I couldn't help but think that traveling was the best answer. 
+  - text: It was a way to escape the monotony of everyday life and discover new places, people, and experiences.
+  - text: Oak suddenly jumped.
+  - oak says happy: Yahoo! Finally!
+  - text: I was taken aback at first, wondering if I had imagined it, but then Oak put a hand on my shoulder.
+  - oak says happy: See Cedar? The little ol' newcomer here is my new best friend. You're still my lovely cousin, though. 
+  - oak says: Hey, new bestie, do you want to go to McFroggers for some fries? 
+  - text: I nodded.
+  - hide oak:
+  - hide cedar:
+  - hide room:
+  - show room:
+  - show oak:
+  - text: As we munched on our fries and talked about our lives, I found myself enjoying Oak's company more and more. 
+  - text: He was funny, curious, and had a great sense of adventure. And then, just as we were finishing up, he dropped a bombshell.
+  - text: He was moving out in a few days and would no longer be around.
+  - text: I felt a pang of sadness at the thought of losing my new friend, and gave a little frown.
+  - oak says: Hey, why don't we become pen pals?
+  - oak says happy: That way we can keep in touch and share our adventures, no matter where we are in the world
+  - text: I was thrilled at the prospect and eagerly agreed. And so, as we said our goodbyes, we exchanged addresses and promised to write to each other regularly.
+  - hide oak: 
+  - hide room:
+  - text: As I walked away from McFroggy's, I couldn't help but smile at the unexpected turn of events. Sometimes, the best things in life really do come from taking a chance and embracing the unknown
+  - scene: endGame
+
+
+badCedar:
+  - stop bgm:
+  - cedar says angry: S-s-sorry for being a weird nerd.
+  - text: Cedar is looking down at her feet. I can see Oak giving me a look.
+  - text: I was taken aback by her sudden change in demeanor and the heavy awkward pause that followed.
+  - text: I quickly reassured her that there was nothing to apologize for and that I didn't think she was weird at all.
+  - text: Despite the awkward moment, I could sense that she was still interested in being friends, and so was I. 
+  - text: I suggested that we go to a teashop together another day and chat some more about our shared love of books. 
+  - hide oak:
+  - text: She smiled and seemed relieved, and we exchanged contact information before saying goodbye. 
+  - hide cedar:
+  - hide room:
+  - text: As I walked away, I couldn't help but think that maybe I had come across as a little rude to her. 
+  - text: Even though fanfics weren't my thing, I realized that everyone has their own interests and passions, and that's what makes life interesting.
+  - scene: endGame
+
+goodCedar:
+  - stop bgm:
+  - play cedarBGM: LOOPED
+  - text: I couldn't help but think about settling into my favorite armchair with a hot cup of tea and a good book.
+  - text: "Cozying up with a good book, of course! I need tea whenever I do that too."
+  - cedar says happy: Booyah! Finally!
+  - text: I was taken aback at first since she sounded more on the quiet side.
+  - cedar says happy: This newcomer is my new best friend, who isn't a cousin, unlike Oak here.
+  - cedar says normal: I had been searching for someone to hang out with all day. By any chance, do you read fanfics too? Do you want to go to a local tea shop with me?
+  - text: I chuckled and nodded. 
+  - oak says: Tea water isn't for everyone, I understand. It was nice meeting you too, newcomer. See you later!
+  - hide oak:
+  - text: Cedar rolled their eyes. 
+  - cedar says: Don't mind Oak, he's a good guy deep down. Let's go to the tea shop. It's called FlyTea.
+  - hide cedar:
+  - hide room:
+  - show room:
+  - text: As we sipped our tea and chatted about our lives, I found myself enjoying Cedar's company more and more. They were funny, intelligent, and had a great sense of humor. 
+  - text: We shared stories and laughed at each other's jokes, and I couldn't help but think that sometimes unexpected company can be the best kind.
+  - text: As the afternoon drew to a close, we exchanged numbers and promised to meet up again soon. 
+  - hide room:
+  - text: Walking home with a smile on my face, I realized that the best moments in life often come from unexpected encounters and the willingness to embrace them.
+  - scene: endGame
+
+ 
 endGame:
-  - mayor says angry: Quickstart over!
   - hide ALL:
+  - stop bgm:
+  - play menuMUSIC: LOOPED
   - effect ROLLINGCREDITS:
     endGame: true
     text:

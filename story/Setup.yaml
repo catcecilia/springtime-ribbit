@@ -11,30 +11,30 @@ characters:
       normal: assets/characters/mayorNormal.png
       happy: assets/characters/mayorHappy.png
       angry: assets/characters/mayorAngry.png
-  alconite:
-    displayName: Alconite
-    speechColour: "#345F00"
+  aconite:
+    displayName: Aconite
+    speechColour: "#663399"
     looks:
       normal: assets/characters/alconiteNormal.png
       happy: assets/characters/alconiteHappy.png
       angry: assets/characters/alconiteAngry.png
   cedar:
     displayName: Cedar
-    speechColour: "#345F00"
+    speechColour: "#32cd32"
     looks:
       normal: assets/characters/cedarNormal.png
       happy: assets/characters/cedarHappy.png
       angry: assets/characters/cedarAngry.png
   oak:
     displayName: Oak
-    speechColour: "#345F00"
+    speechColour: "#7fff00"
     looks:
       normal: assets/characters/oakNormal.png
       happy: assets/characters/oakHappy.png
       angry: assets/characters/oakAngry.png
   tigerella:
     displayName: Tigerella
-    speechColour: "#345F00"
+    speechColour: "#ff6347"
     looks:
       normal: assets/characters/tigerellaNormal.png
       happy: assets/characters/tigerellaHappy.png
@@ -46,7 +46,7 @@ cgs:
 music:
   menuMusic: assets/audio/PolkaTrain.ogg
   normalBGM: assets/audio/DrummingSticks.ogg
-  alconiteBGM: assets/audio/AlphaDance.ogg
+  aconiteBGM: assets/audio/AlphaDance.ogg
   cedarBGM: assets/audio/TimeDriving.ogg
   oakBGM: assets/audio/SadTown.ogg
   tigerellaBGM: assets/audio/SadDescent.ogg
