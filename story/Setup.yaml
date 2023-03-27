@@ -1,8 +1,15 @@
 backgrounds:
-  room: assets/backgrounds/room_day.jpg
-  room_night: assets/backgrounds/room_night.jpg
-  room_night_light: assets/backgrounds/room_night_light.jpg
-
+  everyonePic: assets/backgrounds/everyoneEnding.png
+  aconiteCourt: assets/backgrounds/aconitecourt.png
+  aconiteRestaurant: assets/backgrounds/aconiterestaraunt.jpg
+  cedarRestaurant: assets/backgrounds/cedarrestaurant.jpg
+  communityCenter: assets/backgrounds/communitycenter.jpg
+  communityCenterHallway: assets/backgrounds/communitycenterhallway.jpg
+  libraryEvent: assets/backgrounds/libraryevent.png
+  oakRestaurant: assets/backgrounds/oakrestruant.jpg
+  outsideCommunityCenter: assets/backgrounds/outsidecommunitycenter.jpg
+  outsideTown: assets/backgrounds/outsidetown.jpg
+  tigerellaRoom: assets/backgrounds/tigerella.jpg
 characters:
   mayor:
     displayName: Mayor Hopps
